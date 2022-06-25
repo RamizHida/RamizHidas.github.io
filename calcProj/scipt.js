@@ -66,7 +66,9 @@ if (getUrl.includes("?")) {
   let searchPar = new URLSearchParams(getUrl.split("?")[1]);
   for (let pair of searchPar.entries()) {
     if (pair[0] == "calculator") {
-      calculatorresult.value = getCalculation(pair[1]);
+      calculatorresult.value = getCalculation(
+        pair[1].replace("web+ramiz://", "")
+      );
     }
   }
 }
