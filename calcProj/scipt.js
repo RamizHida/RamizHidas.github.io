@@ -2,7 +2,7 @@
 
 navigator.registerProtocolHandler(
   "web+Ramiz",
-  "http://127.0.0.1:56675/?calculator=%s",
+  "https://ramizhida.github.io/calcProj/index.html?calculator=%s",
   "Ramiz Calculator"
 );
 
