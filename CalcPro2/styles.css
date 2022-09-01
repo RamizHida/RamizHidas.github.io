@@ -1,0 +1,41 @@
+body {
+  background-color: beige;
+}
+
+.container {
+  background: lightGrey;
+  width: max-content;
+  margin: auto;
+}
+
+.display {
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  font-size: 48px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+}
+.buttons {
+  display: flex;
+  max-width: 400px;
+  flex-wrap: wrap;
+}
+
+button {
+  flex-grow: 1;
+  flex-basis: 25%;
+  padding: 10px;
+  font-size: larger;
+}
+
+.btn-operator {
+  background-color: peru;
+}
+.btn-clear {
+  background-color: red;
+}
+.btn-equals {
+  background-color: lawngreen;
+}
