@@ -1,0 +1,3 @@
+[submodule "Etch-a-Sketch"]
+	path = Etch-a-Sketch
+	url = git@github.com:RamizHida/Etch-a-Sketch.git
