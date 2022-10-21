@@ -1,0 +1,130 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 7px;
+  font-size: 1.5rem;
+  background: #fca5a5;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.heading {
+  margin-top: 1.5rem;
+  width: 99%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  height: 5rem;
+  border-bottom: 2px solid black;
+}
+
+.btn {
+  height: fit-content;
+  color: #fff;
+  background: #0ea5e9;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+
+.btn:hover,
+.book--form button:hover {
+  transform: scale(1.1);
+  transition: ease-in 0.1s;
+  cursor: pointer;
+}
+
+#add {
+  margin-right: 1.5rem;
+}
+
+/* Book Form */
+.book--form {
+  width: 20rem;
+  height: 26rem;
+  border-radius: 1rem;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 1.6rem;
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 40%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+label[for="read"] {
+  display: inline-block;
+}
+
+form div {
+  margin: 1.2rem;
+}
+
+.book--form button {
+  background: #0ea5e9;
+  color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  margin-left: 5rem;
+}
+
+/* Books */
+.book {
+  box-sizing: border-box;
+  width: 25rem;
+  height: 25rem;
+  background: #94a3b8;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  /* display: none; */
+  margin: 1.5rem;
+}
+
+.book button {
+  color: #fff;
+  font-size: 2rem;
+  background: #475569;
+  border: 0;
+  margin-top: 0.5rem;
+  width: 90%;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+
+.book button:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+#last--prop {
+  margin-bottom: 0;
+}
+
+#book--title {
+  margin-top: 2px;
+}
+
+/* Book layout */
+.container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
