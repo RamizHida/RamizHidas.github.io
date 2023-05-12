@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <img src="images/leaf.jpg" alt="large wet leaf" />
+    <section class="left--container">
+      <h2 class="main--heading">
+        This is not a real online service. You know you need something like this
+        in your life to help you realize your deepest dreams. Sign up
+        <span class="emphasis">now</span> to get started.
+      </h2>
+      <h2 class="form--header">
+        You <span class="emphasis">know</span> you want to.
+      </h2>
+      <form action="" method="post" id="signup-form">
+        <legend>Let's do this!</legend>
+        <div class="container">
+          <div>
+            <label for="name"> First Name</label>
+            <input type="text" id="name" value="Thor" />
+          </div>
+          <div>
+            <label for="lastname"> Last Name</label>
+            <input type="text" id="lastname" value="Odinson" class="selected" />
+          </div>
+          <div>
+            <label for="email"> Email</label>
+            <input type="email" required />
+          </div>
+          <div>
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input class="error" type="password" id="password" />
+            <h5>* Passwords do not match</h5>
+          </div>
+          <div>
+            <label for="passwordcon">Confirm Password</label>
+            <input class="error" type="password" id="passwordcon" />
+          </div>
+        </div>
+      </form>
+      <button type="submit" form="signup-form">Create Account</button>
+      <h4>
+        Already have an account?
+        <a href="#">Log in</a>
+      </h4>
+      <footer>Photo by Halie West on Unsplash</footer>
+      <div class="image--bar">
+        <img
+          class="thor--image"
+          src="images/thor.png"
+          alt="Thor, a hammer-wielding god"
+        />
+        <h6 class="name--odin">ODIN</h6>
+      </div>
+    </section>
+  </body>
+</html>
