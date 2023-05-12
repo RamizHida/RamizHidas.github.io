@@ -1,3 +1,6 @@
 [submodule "Etch-a-Sketch"]
 	path = Etch-a-Sketch
 	url = git@github.com:RamizHida/Etch-a-Sketch.git
+[submodule "Rennovation"]
+	path = Rennovation
+	url = https://github.com/RamizHida/Rennovation.git
