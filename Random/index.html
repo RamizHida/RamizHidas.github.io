@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random</title>
+  </head>
+  <body>
+    <h1>I like cats</h1>
+    <img src="" />
+    <div>
+      <h1>Get an image of my favorite animal</h1>
+      <button id="imageButton">Click me!</button>
+      <img src="" alt="" id="anotherImage" />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+      <h1>Your turn</h1>
+      <form>
+        <label for="search">
+          What would you like to see today?
+          <input type="text" id="search" />
+        </label>
+        <button id="findSearch">Find it!</button>
+        <img src="" alt="" id="searchImage" />
+      </form>
+    </div>
+    <script>
+      const img = document.querySelector('img');
+      fetch(
+        'https://api.giphy.com/v1/gifs/translate?api_key=kwyWHDR4auHLX3DwrNQyfO5CKymsCZU0&s=cats',
+        {
+          mode: 'cors',
+        }
+      )
+        .then(function (respone) {
+          return respone.json();
+        })
+        .then((response) => {
+          img.src = response.data.images.original.url;
+        });
+
+      function getAnotherImage() {
+        fetch(
+          'https://api.giphy.com/v1/gifs/translate?api_key=kwyWHDR4auHLX3DwrNQyfO5CKymsCZU0&s=sloth',
+          {
+            mode: 'cors',
+          }
+        )
+          .then(function (respone) {
+            return respone.json();
+          })
+          .then((response) => {
+            newImage.src = response.data.images.original.url;
+          });
+      }
+      const newImage = document.getElementById('anotherImage');
+      const imageButton = document.getElementById('imageButton');
+      imageButton.addEventListener('click', getAnotherImage);
+
+      //
+
+      const searchedImage = document.getElementById('searchImage');
+      const searchButton = document.getElementById('findSearch');
+      const inputValue = document.getElementById('search');
+      searchButton.addEventListener('click', getImage);
+
+      function getImage(e) {
+        e.preventDefault();
+        if (inputValue.value.length === 0) {
+          return window.alert('Please type something to search for');
+        }
+        fetch(
+          `https://api.giphy.com/v1/gifs/translate?api_key=kwyWHDR4auHLX3DwrNQyfO5CKymsCZU0&s=${inputValue.value}`,
+          {
+            mode: 'cors',
+          }
+        )
+          .then(function (respone) {
+            return respone.json();
+          })
+          .then((response) => {
+            searchedImage.src = response.data.images.original.url;
+          });
+      }
+    </script>
+  </body>
+</html>
